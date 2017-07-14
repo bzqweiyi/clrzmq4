@@ -168,7 +168,7 @@
 						{
 							// This is Platform.Posix. In mono, just dlopen'ing the library doesn't work.
 							// Using DllImport("__Internal", EntryPoint = "mono_dllmap_insert") to get mono on the path.
-							MonoDllMapInsert(libraryName, file);
+							// MonoDllMapInsert(libraryName, file);
 
 							Trace.TraceInformation(string.Format("{0} Loaded binary \"{1}\"", 
 								traceLabel, file));
@@ -196,7 +196,7 @@
 
 					if (!handle.IsNullOrInvalid())
 					{
-						MonoDllMapInsert(libraryName, tempPath);
+						// MonoDllMapInsert(libraryName, tempPath);
 
 						Trace.TraceInformation(string.Format("{0} Loaded binary from EmbeddedResource \"{1}\" from \"{2}\".", 
 							traceLabel, resourceName, tempPath));
